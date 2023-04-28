@@ -9,12 +9,11 @@ This app also shows the usage of the Navigation Architecture Component.
 - Price changes of coin in a graph
 
 ## Screenshots
-<img alt="List" src="art/screenshot.png">
+![](screenshots/collage.png)
 
 ## Architecture
 The MVVM architecture pattern is a way of separating the concerns of the UI, business logic, and data layers. The goal of MVVM is to create a maintainable, scalable, and testable application by isolating each layer and making it easy to swap out components.
-
-![](screenshots/collage.png)
+![](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
 
 ## Modules:
 * **ui** - It uses all the components and classes releated to Android Framework.
@@ -87,7 +86,7 @@ Covered Coin List ViewModel, Coin Detail ViewModel, Rest Client and Utility Clas
 
 - ### CoinListViewModel Unit Test
     ![](screenshots/coinlistviewmodel_test.png)
-  - ### CoinDetailViewModel Unit Test
+- ### CoinDetailViewModel Unit Test
     ![](screenshots/coint_detail_viewmodel_test_screenshot.png)
 - ### RestClient Unit Test
     ![](screenshots/restclient_test_screenshot.png)
