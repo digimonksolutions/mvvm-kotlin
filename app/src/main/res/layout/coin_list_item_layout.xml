@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:background="?android:selectableItemBackground"
+        android:paddingBottom="@dimen/_5sdp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ivCoinCv"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp">
+            <ImageView
+                android:id="@+id/ivCoinImage"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center" />
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <TextView
+            android:id="@+id/tvCoinName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivCoinCv"
+            app:layout_constraintTop_toTopOf="@id/ivCoinCv"
+            app:layout_constraintEnd_toStartOf="@id/tvCoinPrice"
+            app:layout_constraintBottom_toTopOf="@id/tvCoinSymbol"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="BTC"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvCoinSymbol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivCoinCv"
+            app:layout_constraintTop_toBottomOf="@id/tvCoinName"
+            app:layout_constraintBottom_toBottomOf="@id/ivCoinCv"
+            app:layout_constraintEnd_toStartOf="@id/tvCoinPrice"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="BTC"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_14ssp" />
+
+
+
+        <TextView
+            android:id="@+id/tvCoinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvCoinPer"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/medium"
+            android:text="$ 20239"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tvCoinPer"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            app:layout_constraintTop_toBottomOf="@id/tvCoinPrice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="$ 20239"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

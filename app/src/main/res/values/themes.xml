@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/gray</item>
+
+
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="CollapsingTitleTextAppearance" parent="TextAppearance.AppCompat">
+
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="paddingStart">0dp</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ExpandedTextAppearance" parent="TextAppearance.AppCompat">
+
+        <item name="android:textSize">@dimen/_25ssp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/regular</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coinListFragment">
+    <fragment
+        android:id="@+id/coinListFragment"
+        android:name="com.cryptocapital.ui.fragment.coinList.CoinListFragment"
+        android:label="CoinListFragment"
+        tools:layout="@layout/fragment_coin_list">
+        <action
+            android:id="@+id/action_coinListFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.cryptocapital.ui.fragment.coinDetail.CoinDetailFragment"
+        android:label="CoinDetailFragment"
+        tools:layout="@layout/fragment_coin_detail">
+        <argument android:name="coinID"
+            app:argType="string" />
+        <argument android:name="color"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

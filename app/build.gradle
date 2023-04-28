@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id "androidx.navigation.safeargs.kotlin"
+    id "kotlin-kapt"
+    id "kotlin-parcelize"
+}
+
+android {
+    namespace 'com.cryptocapital'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.cryptocapital"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures{
+        dataBinding true
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+ext {
+    koin_version= '3.4.0'
+    koin_android_version= '3.4.0'
+    coroutinesVersion ="1.6.4"
+    navigation_version = "2.5.3"
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.palette:palette:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    testImplementation 'org.mockito:mockito-core:5.3.0'
+    testImplementation "org.mockito:mockito-inline:3.1.0"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "androidx.test:core-ktx:1.5.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+    testImplementation "io.mockk:mockk:1.13.5"
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
+    testImplementation 'com.squareup.okhttp3:mockwebserver:5.0.0-alpha.2'
+
+
+
+
+    //Glide (image loader)
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //Fragment Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    //Koin
+    implementation "io.insert-koin:koin-core:$koin_version"
+    // Koin main features for Android
+    implementation "io.insert-koin:koin-android:$koin_android_version"
+    // Koin Test
+    implementation 'io.insert-koin:koin-test:3.4.0'
+    implementation 'io.insert-koin:koin-test-junit4:3.4.0'
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+
+    //Fragment Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    //sdp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    //Mp Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit-mock:2.9.0'
+
+    //okhttp3
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+}
