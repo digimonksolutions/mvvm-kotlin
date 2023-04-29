@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.cryptocapital'
+    namespace 'com.mvvm.cryptocapital'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.cryptocapital"
+        applicationId "com.mvvm.cryptocapital"
         minSdk 24
         targetSdk 33
         versionCode 1

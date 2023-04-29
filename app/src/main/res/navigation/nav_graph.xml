@@ -6,7 +6,7 @@
     app:startDestination="@id/coinListFragment">
     <fragment
         android:id="@+id/coinListFragment"
-        android:name="com.cryptocapital.ui.fragment.coinList.CoinListFragment"
+        android:name="com.mvvm.cryptocapital.ui.fragment.coinList.CoinListFragment"
         android:label="CoinListFragment"
         tools:layout="@layout/fragment_coin_list">
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/coinDetailFragment"
-        android:name="com.cryptocapital.ui.fragment.coinDetail.CoinDetailFragment"
+        android:name="com.mvvm.cryptocapital.ui.fragment.coinDetail.CoinDetailFragment"
         android:label="CoinDetailFragment"
         tools:layout="@layout/fragment_coin_detail">
         <argument android:name="coinID"

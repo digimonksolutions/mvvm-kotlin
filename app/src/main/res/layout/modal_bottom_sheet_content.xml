@@ -80,7 +80,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         app:layout_constraintTop_toBottomOf="@id/tvOverviewHeader" />
 
-                    <com.cryptocapital.utils.ReadMoreTextView
+                    <com.mvvm.cryptocapital.utils.ReadMoreTextView
                         android:id="@+id/tvOverViewBody"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

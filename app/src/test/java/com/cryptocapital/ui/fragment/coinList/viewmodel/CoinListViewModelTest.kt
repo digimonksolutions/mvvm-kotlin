@@ -1,12 +1,12 @@
-package com.cryptocapital.ui.fragment.coinList.viewmodel
+package com.mvvm.cryptocapital.ui.fragment.coinList.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.SavedStateHandle
-import com.cryptocapital.data.Resource
-import com.cryptocapital.data.remote.Response
-import com.cryptocapital.data.repository.RemoteRepository
-import com.cryptocapital.model.CoinListResponse
-import com.cryptocapital.utils.AppConstants
+import com.mvvm.cryptocapital.data.Resource
+import com.mvvm.cryptocapital.data.remote.Response
+import com.mvvm.cryptocapital.data.repository.RemoteRepository
+import com.mvvm.cryptocapital.model.CoinListResponse
+import com.mvvm.cryptocapital.utils.AppConstants
 import com.google.gson.Gson
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.Dispatchers

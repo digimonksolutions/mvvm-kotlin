@@ -26,7 +26,7 @@ The MVVM architecture pattern is a way of separating the concerns of the UI, bus
 
 ## Module Structure
 
-    com.cryptocapital     # Root Package
+    com.mvvm.cryptocapital     # Root Package
     .
     ├── base
     |   ├── base fragment       # For reducing duplicate code in fragments.

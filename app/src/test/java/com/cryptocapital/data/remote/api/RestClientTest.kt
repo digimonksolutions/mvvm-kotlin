@@ -1,12 +1,12 @@
-package com.cryptocapital.data.remote.api
+package com.mvvm.cryptocapital.data.remote.api
 
 import android.content.Context
-import com.cryptocapital.R
-import com.cryptocapital.data.remote.Response
-import com.cryptocapital.data.remote.settings.Setting
-import com.cryptocapital.model.CoinChartDataResponse
-import com.cryptocapital.model.CoinDetailResponse
-import com.cryptocapital.model.CoinListResponse
+import com.mvvm.cryptocapital.R
+import com.mvvm.cryptocapital.data.remote.Response
+import com.mvvm.cryptocapital.data.remote.settings.Setting
+import com.mvvm.cryptocapital.model.CoinChartDataResponse
+import com.mvvm.cryptocapital.model.CoinDetailResponse
+import com.mvvm.cryptocapital.model.CoinListResponse
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import mockwebserver3.MockResponse
