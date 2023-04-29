@@ -9,7 +9,7 @@ This app also shows the usage of the Navigation Architecture Component.
 - Price changes of coin in a graph
 
 ## Screenshots
-![](screenshots/collage.png)
+![](screenshots/crypto_capital_screenshot.jpg)
 
 ## Architecture
 The MVVM architecture pattern is a way of separating the concerns of the UI, business logic, and data layers. The goal of MVVM is to create a maintainable, scalable, and testable application by isolating each layer and making it easy to swap out components.
