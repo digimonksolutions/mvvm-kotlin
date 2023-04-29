@@ -15,7 +15,7 @@ This app also shows the usage of the Navigation Architecture Component.
 The MVVM architecture pattern is a way of separating the concerns of the UI, business logic, and data layers. The goal of MVVM is to create a maintainable, scalable, and testable application by isolating each layer and making it easy to swap out components.
 ![](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
 
-## Modules:
+## Packages:
 * **ui** - It uses all the components and classes releated to Android Framework.
 * **data** - The data layer contains the *remote* module to get data from web server using retrofit and the *repository* module which acts as a mediator between the ViewModel and the data sources (such as a database or web service).
 * **base** - the base module contains *Base Fragment*, *Base ViewModel* and *Base Adapter* to reduce the code duplication
@@ -24,7 +24,7 @@ The MVVM architecture pattern is a way of separating the concerns of the UI, bus
 * **model** - Contains all the Data Class (POJO)
 * **utils** - Utiliy Classes like App Constant and Custom functions
 
-## Module Structure
+## Package Structure
 
     com.mvvm.cryptocapital     # Root Package
     .
