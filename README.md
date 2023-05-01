@@ -16,13 +16,13 @@ The MVVM architecture pattern is a way of separating the concerns of the UI, bus
 ![](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
 
 ## Packages:
-* **ui** - It uses all the components and classes releated to Android Framework.
+* **ui** - It uses all the components and classes related to Android Framework.
 * **data** - The data layer contains the *remote* module to get data from web server using retrofit and the *repository* module which acts as a mediator between the ViewModel and the data sources (such as a database or web service).
 * **base** - the base module contains *Base Fragment*, *Base ViewModel* and *Base Adapter* to reduce the code duplication
 * **di** - It contains `Koin` modules for dependency injection.
 * **extensions** - Kotlin extensions to reduce boilerplate code.
 * **model** - Contains all the Data Class (POJO)
-* **utils** - Utiliy Classes like App Constant and Custom functions
+* **utils** - Utility Classes like App Constant and Custom functions
 
 ## Package Structure
 
