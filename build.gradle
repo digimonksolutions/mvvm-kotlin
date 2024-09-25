@@ -11,5 +11,6 @@ plugins {
 sonar {
     properties {
         property "sonar.projectKey", "digimonksolutions_mvvm-kotlin_AZIorxXBWHKbKGs821hf"
+        property "sonar.androidLint.reportPaths", "${rootProject.layout.buildDirectory}/reports/lint-results-debug.html"
     }
 }
