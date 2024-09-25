@@ -10,6 +10,6 @@ plugins {
 
 sonar {
     properties {
-        property "sonar.projectKey", "karan-0603_android_ci_cd_demo_AZIoQTGMWHKbKGs821g-"
+        property "sonar.projectKey", "digimonksolutions_mvvm-kotlin_AZIorxXBWHKbKGs821hf"
     }
 }
