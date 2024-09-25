@@ -58,13 +58,13 @@ class CoinListViewModelTest {
         ).thenReturn(
             Response.success(expectedData, 200)
         )
-
-        // When
         viewModel.getCoinList()
+        // When
+        val actualData = viewModel.coinListLiveData.value
 
         // Then
-        assertEquals(Resource.Status.SUCCESS, viewModel.coinListLiveData.value?.status)
-        assertTrue(viewModel.coinListLiveData.value?.data?.isNotEmpty()!!)
+        assertEquals(Resource.Status.SUCCESS, actualData?.status)
+        assertTrue(actualData?.data?.isNotEmpty()!!)
 
     }
 
@@ -81,11 +81,12 @@ class CoinListViewModelTest {
 
         // When
         viewModel.getCoinList()
+        val actualData = viewModel.coinListLiveData.value
 
         // Then
-        assertEquals(Resource.Status.ERROR, viewModel.coinListLiveData.value?.status)
-        assertEquals(null, viewModel.coinListLiveData.value?.data)
-        assertEquals(errorMessage, viewModel.coinListLiveData.value?.message)
+        assertEquals(Resource.Status.ERROR, actualData?.status)
+        assertEquals(null, actualData?.data)
+        assertEquals(errorMessage, actualData?.message)
 
     }
     @Test
@@ -100,12 +101,13 @@ class CoinListViewModelTest {
         )
 
         // When
-        val actualData = viewModel.getCoinList()
+        viewModel.getCoinList()
+        val actualData = viewModel.coinListLiveData.value
 
         // Then
-        assertEquals(Resource.Status.EMPTY, viewModel.coinListLiveData.value?.status)
-        assertEquals(null, viewModel.coinListLiveData.value?.data)
-        assertEquals(errorMessage, viewModel.coinListLiveData.value?.message)
+        assertEquals(Resource.Status.EMPTY, actualData?.status)
+        assertEquals(null, actualData?.data)
+        assertEquals(errorMessage, actualData?.message)
 
     }
 

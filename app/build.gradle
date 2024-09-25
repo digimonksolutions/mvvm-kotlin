@@ -8,16 +8,19 @@ plugins {
 
 android {
     namespace 'com.mvvm.cryptocapital'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.mvvm.cryptocapital"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions{
+        checkReleaseBuilds false
     }
 
     buildTypes {
@@ -29,6 +32,7 @@ android {
     buildFeatures{
         dataBinding true
         viewBinding true
+        buildConfig true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -39,29 +43,29 @@ android {
     }
 }
 ext {
-    koin_version= '3.4.0'
-    koin_android_version= '3.4.0'
-    coroutinesVersion ="1.6.4"
-    navigation_version = "2.5.3"
+    koin_version= '3.5.6'
+    koin_android_version= '3.5.6'
+    coroutinesVersion ="1.8.0"
+    navigation_version = "2.7.7"
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.palette:palette-ktx:1.0.0'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
 
     testImplementation 'org.mockito:mockito-core:5.3.0'
     testImplementation "org.mockito:mockito-inline:3.1.0"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
-    testImplementation "androidx.test:core-ktx:1.5.0"
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+    testImplementation "androidx.test:core-ktx:1.6.1"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0'
     testImplementation "io.mockk:mockk:1.13.5"
     testImplementation "androidx.arch.core:core-testing:2.2.0"
     testImplementation 'com.squareup.okhttp3:mockwebserver:5.0.0-alpha.2'
@@ -70,7 +74,7 @@ dependencies {
 
 
     //Glide (image loader)
-    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     //Fragment Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
@@ -100,10 +104,10 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.retrofit2:retrofit-mock:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.retrofit2:retrofit-mock:2.11.0'
 
     //okhttp3
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'

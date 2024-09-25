@@ -21,7 +21,7 @@ import com.mvvm.cryptocapital.base.BaseViewHolder
 class CoinListAdapter(
     data:ArrayList<CoinListResponse.CoinListResponseItem>,
     viewModel:CoinListViewModel
-): BaseAdapters<CoinListItemLayoutBinding, CoinListViewModel, CoinListResponse.CoinListResponseItem>(data, viewModel) {
+): com.mvvm.cryptocapital.base.BaseAdapters<CoinListItemLayoutBinding, CoinListViewModel, CoinListResponse.CoinListResponseItem>(data, viewModel) {
     override val layoutId: Int
         get() = R.layout.coin_list_item_layout
 
@@ -29,7 +29,8 @@ class CoinListAdapter(
         binding: CoinListItemLayoutBinding,
         item: CoinListResponse.CoinListResponseItem,
         position: Int,
-        holder: BaseViewHolder<CoinListItemLayoutBinding>
+        holder: com.mvvm.cryptocapital.base.BaseViewHolder<CoinListItemLayoutBinding>,
+        viewModel: CoinListViewModel
     ) {
         var color = Color.WHITE
         binding.tvCoinName.text = item.name
@@ -39,7 +40,7 @@ class CoinListAdapter(
                 override fun onLoadFailed(
                     e: GlideException?,
                     model: Any?,
-                    target: Target<Bitmap>?,
+                    target: Target<Bitmap>,
                     isFirstResource: Boolean
                 ): Boolean {
 
@@ -47,10 +48,10 @@ class CoinListAdapter(
                 }
 
                 override fun onResourceReady(
-                    resource: Bitmap?,
-                    model: Any?,
+                    resource: Bitmap,
+                    model: Any,
                     target: Target<Bitmap>?,
-                    dataSource: DataSource?,
+                    dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
                     Palette.from(resource!!).generate {
