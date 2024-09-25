@@ -1,8 +1,9 @@
-package com.mvvm.cryptocapital.data.remote.api
+package com.cryptocapital.data.remote.api
 
 import android.content.Context
 import com.mvvm.cryptocapital.R
 import com.mvvm.cryptocapital.data.remote.Response
+import com.mvvm.cryptocapital.data.remote.api.RestClient
 import com.mvvm.cryptocapital.data.remote.settings.Setting
 import com.mvvm.cryptocapital.model.CoinChartDataResponse
 import com.mvvm.cryptocapital.model.CoinDetailResponse

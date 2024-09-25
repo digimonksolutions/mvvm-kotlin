@@ -1,4 +1,4 @@
-package com.mvvm.cryptocapital.ui.fragment.coinDetail.viewmodel
+package com.cryptocapital.ui.fragment.coinDetail.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.mvvm.cryptocapital.data.Resource
@@ -8,6 +8,7 @@ import com.mvvm.cryptocapital.model.CoinChartDataResponse
 import com.mvvm.cryptocapital.model.CoinDetailResponse
 import com.mvvm.cryptocapital.utils.AppConstants
 import com.google.gson.Gson
+import com.mvvm.cryptocapital.ui.fragment.coinDetail.viewmodel.CoinDetailViewModel
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

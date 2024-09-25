@@ -1,4 +1,4 @@
-package com.mvvm.cryptocapital.ui.fragment.coinList.viewmodel
+package com.cryptocapital.ui.fragment.coinList.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.SavedStateHandle
@@ -8,6 +8,7 @@ import com.mvvm.cryptocapital.data.repository.RemoteRepository
 import com.mvvm.cryptocapital.model.CoinListResponse
 import com.mvvm.cryptocapital.utils.AppConstants
 import com.google.gson.Gson
+import com.mvvm.cryptocapital.ui.fragment.coinList.viewmodel.CoinListViewModel
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -59,11 +60,11 @@ class CoinListViewModelTest {
         )
 
         // When
-        val actualData = viewModel.getCoinList().value?.peekContent()
+        viewModel.getCoinList()
 
         // Then
-        assertEquals(Resource.Status.SUCCESS, actualData?.status)
-        assertTrue(actualData?.data?.isNotEmpty()!!)
+        assertEquals(Resource.Status.SUCCESS, viewModel.coinListLiveData.value?.status)
+        assertTrue(viewModel.coinListLiveData.value?.data?.isNotEmpty()!!)
 
     }
 
@@ -79,12 +80,12 @@ class CoinListViewModelTest {
         )
 
         // When
-        val actualData = viewModel.getCoinList().value?.peekContent()
+        viewModel.getCoinList()
 
         // Then
-        assertEquals(Resource.Status.ERROR, actualData?.status)
-        assertEquals(null, actualData?.data)
-        assertEquals(errorMessage, actualData?.message)
+        assertEquals(Resource.Status.ERROR, viewModel.coinListLiveData.value?.status)
+        assertEquals(null, viewModel.coinListLiveData.value?.data)
+        assertEquals(errorMessage, viewModel.coinListLiveData.value?.message)
 
     }
     @Test
@@ -99,12 +100,12 @@ class CoinListViewModelTest {
         )
 
         // When
-        val actualData = viewModel.getCoinList().value?.peekContent()
+        val actualData = viewModel.getCoinList()
 
         // Then
-        assertEquals(Resource.Status.EMPTY, actualData?.status)
-        assertEquals(null, actualData?.data)
-        assertEquals(errorMessage, actualData?.message)
+        assertEquals(Resource.Status.EMPTY, viewModel.coinListLiveData.value?.status)
+        assertEquals(null, viewModel.coinListLiveData.value?.data)
+        assertEquals(errorMessage, viewModel.coinListLiveData.value?.message)
 
     }
 

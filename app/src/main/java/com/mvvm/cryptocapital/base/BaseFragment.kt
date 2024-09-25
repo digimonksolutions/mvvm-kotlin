@@ -28,6 +28,7 @@ abstract class BaseFragment<BINDING : ViewDataBinding, VM : BaseViewModel>() : F
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
     }
 
     override fun onCreateView(

@@ -4,5 +4,11 @@ plugins {
     id 'com.android.library' version '7.4.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
     id 'androidx.navigation.safeargs' version '2.5.3' apply false
+    id "org.sonarqube" version "3.5.0.2730"
+}
 
+sonar {
+    properties {
+        property "sonar.projectKey", "digimonksolutions_mvvm-kotlin_AZIorxXBWHKbKGs821hf"
+    }
 }

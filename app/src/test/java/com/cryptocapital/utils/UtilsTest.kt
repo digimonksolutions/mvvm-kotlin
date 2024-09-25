@@ -1,4 +1,4 @@
-package com.mvvm.cryptocapital.utils
+package com.cryptocapital.utils
 
 import com.mvvm.cryptocapital.utils.Utils.Companion.monetaryDescription
 import org.junit.Assert.*

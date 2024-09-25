@@ -11,25 +11,25 @@ import androidx.recyclerview.widget.RecyclerView
 abstract class BaseAdapters<BINDING : ViewDataBinding,VM:ViewModel,T>(
     var data: List<T>?,
     var viewModel: VM
-) : RecyclerView.Adapter<com.mvvm.cryptocapital.base.BaseViewHolder<BINDING>>() {
+) : RecyclerView.Adapter<BaseViewHolder<BINDING>>() {
 
     @get:LayoutRes
     abstract val layoutId: Int
 
-    abstract fun bind(binding: BINDING, item: T, position: Int, holder: com.mvvm.cryptocapital.base.BaseViewHolder<BINDING>, viewModel: VM)
+    abstract fun bind(binding: BINDING, item: T, position: Int, holder: BaseViewHolder<BINDING>)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): com.mvvm.cryptocapital.base.BaseViewHolder<BINDING> {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<BINDING> {
         val binder = DataBindingUtil.inflate<BINDING>(
             LayoutInflater.from(parent.context),
             layoutId,
             parent,
             false
         )
-        return com.mvvm.cryptocapital.base.BaseViewHolder(binder)
+        return BaseViewHolder(binder)
     }
 
-    override fun onBindViewHolder(holder: com.mvvm.cryptocapital.base.BaseViewHolder<BINDING>, position: Int) {
-        data?.get(position)?.let { bind(holder.binder, it, position,holder,viewModel) }
+    override fun onBindViewHolder(holder: BaseViewHolder<BINDING>, position: Int) {
+        data?.get(position)?.let { bind(holder.binder, it, position,holder) }
     }
 
     override fun getItemCount(): Int = data?.size ?: 0

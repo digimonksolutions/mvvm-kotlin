@@ -21,7 +21,7 @@ import com.mvvm.cryptocapital.base.BaseViewHolder
 class CoinListAdapter(
     data:ArrayList<CoinListResponse.CoinListResponseItem>,
     viewModel:CoinListViewModel
-): com.mvvm.cryptocapital.base.BaseAdapters<CoinListItemLayoutBinding, CoinListViewModel, CoinListResponse.CoinListResponseItem>(data, viewModel) {
+): BaseAdapters<CoinListItemLayoutBinding, CoinListViewModel, CoinListResponse.CoinListResponseItem>(data, viewModel) {
     override val layoutId: Int
         get() = R.layout.coin_list_item_layout
 
@@ -29,8 +29,7 @@ class CoinListAdapter(
         binding: CoinListItemLayoutBinding,
         item: CoinListResponse.CoinListResponseItem,
         position: Int,
-        holder: com.mvvm.cryptocapital.base.BaseViewHolder<CoinListItemLayoutBinding>,
-        viewModel: CoinListViewModel
+        holder: BaseViewHolder<CoinListItemLayoutBinding>
     ) {
         var color = Color.WHITE
         binding.tvCoinName.text = item.name
